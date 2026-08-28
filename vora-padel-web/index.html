@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VORA PADEL — Move. Play. Vora.</title>
+  <meta name="description" content="VORA PADEL — equipamiento de pádel con diseño, potencia y precisión.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">VORA<span>PADEL</span></a>
+    <nav>
+      <a href="#palas">Palas</a>
+      <a href="#ropa">Ropa</a>
+      <a href="#accesorios">Accesorios</a>
+      <a href="#nosotros">Nosotros</a>
+    </nav>
+    <button class="cart-btn" onclick="openCart()">Carrito <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">NUEVA COLECCIÓN · 2026</p>
+        <h1>MOVE.<br>PLAY.<br><em>VORA.</em></h1>
+        <p>Rendimiento, estilo y pasión. Equipamiento creado para jugar un nivel por encima.</p>
+        <a class="btn" href="#palas">Ver colección</a>
+      </div>
+      <div class="hero-art">
+        <img src="assets/vora-branding.png" alt="Colección VORA PADEL">
+      </div>
+    </section>
+
+    <section class="section" id="palas">
+      <div class="section-head">
+        <div><p class="eyebrow">VORA PADEL</p><h2>Nuestras palas</h2></div>
+        <p>Diseñadas para distintos estilos de juego.</p>
+      </div>
+      <div class="products">
+        <article class="card">
+          <div class="product-visual blaze">V</div>
+          <div class="card-info"><span>POTENCIA + CONTROL</span><h3>VORA BLAZE</h3><p>Equilibrio agresivo para jugadores que buscan precisión.</p><strong>199,00 €</strong><button onclick="addToCart('VORA BLAZE',199)">Añadir al carrito</button></div>
+        </article>
+        <article class="card">
+          <div class="product-visual nitro">V</div>
+          <div class="card-info"><span>POTENCIA + SALIDA</span><h3>VORA NITRO</h3><p>Respuesta explosiva para dominar desde el fondo.</p><strong>199,00 €</strong><button onclick="addToCart('VORA NITRO',199)">Añadir al carrito</button></div>
+        </article>
+        <article class="card">
+          <div class="product-visual pure">V</div>
+          <div class="card-info"><span>CONTROL TOTAL</span><h3>VORA PURE</h3><p>Control y manejabilidad para construir cada punto.</p><strong>199,00 €</strong><button onclick="addToCart('VORA PURE',199)">Añadir al carrito</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div><p class="eyebrow">VORA ESSENTIALS</p><h2>Tu juego.<br>Tu estilo.</h2><p>Prendas y accesorios para acompañarte dentro y fuera de la pista.</p></div>
+      <a class="btn light" href="#ropa">Descubrir</a>
+    </section>
+
+    <section class="section" id="ropa">
+      <div class="section-head"><div><p class="eyebrow">ROPA</p><h2>VORA TECH</h2></div></div>
+      <div class="mini-grid">
+        <article class="mini-card"><div class="shirt">V</div><h3>Camiseta VORA Tech</h3><p>39,00 €</p><button onclick="addToCart('Camiseta VORA Tech',39)">Añadir</button></article>
+        <article class="mini-card"><div class="hoodie">V</div><h3>Sudadera VORA</h3><p>59,00 €</p><button onclick="addToCart('Sudadera VORA',59)">Añadir</button></article>
+        <article class="mini-card"><div class="bag">V</div><h3>Paletero VORA PRO</h3><p>89,00 €</p><button onclick="addToCart('Paletero VORA PRO',89)">Añadir</button></article>
+      </div>
+    </section>
+
+    <section class="section about" id="nosotros">
+      <p class="eyebrow">SOBRE VORA</p>
+      <h2>Hecho para los que no se conforman.</h2>
+      <p>VORA nace de una idea sencilla: el pádel es rendimiento, pero también es actitud. Creamos productos con una estética limpia y una identidad reconocible para que cada punto empiece antes de entrar en la pista.</p>
+    </section>
+  </main>
+
+  <footer><div class="logo">VORA<span>PADEL</span></div><p>MOVE. PLAY. VORA.</p><small>© 2026 VORA PADEL · Proyecto de demostración</small></footer>
+
+  <div class="overlay" id="overlay" onclick="closeCart()"></div>
+  <aside class="cart" id="cart">
+    <button class="close" onclick="closeCart()">×</button><h2>Tu carrito</h2>
+    <div id="cart-items"><p class="empty">Tu carrito está vacío.</p></div>
+    <div class="cart-total"><span>Total</span><strong id="cart-total">0,00 €</strong></div>
+    <button class="checkout" onclick="alert('El pago real se conectará en un paso posterior.')">Continuar</button>
+  </aside>
+  <script src="script.js"></script>
+</body>
+</html>
